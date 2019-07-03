@@ -57,9 +57,9 @@ export default class DropArea extends React.Component<IProps, IState>{
                 } else {
                     response.json().then((json: any[]) => {
                         if(json.length<1){
-                            this.props.setResults("Sorry no face detected",this.state.imageFiles.length)
+                            this.props.setResults("Sorry, could not detect a face",this.state.imageFiles.length)
                         }else{
-                            this.props.setResults("Age is "+json[0].faceAttributes.age,this.state.imageFiles.length)
+                            this.props.setResults("Your age is "+json[0].faceAttributes.age,this.state.imageFiles.length)
                         }
                     })
                 }
@@ -76,7 +76,7 @@ export default class DropArea extends React.Component<IProps, IState>{
                                 {
                                     this.state.imageFiles.length > 0 ?
                                         <div>{this.state.imageFiles.map((file) => <img className="image1" key={file.name} src={file.preview} />)}</div> :
-                                        <p>Try dropping some files here, or click to select files to upload.</p>
+                                        <p>Drag and drop an image here, or click to select an image to upload.</p>
                                 }
                             </div>
                         </ReactDropzone>

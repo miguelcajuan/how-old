@@ -14,6 +14,7 @@
     padding-bottom: 0px;
     height: 51vh;
     background-color: #202125;
+    background-image: linear-gradient(rgba(16, 88, 0, 0.884),rgba(5, 2, 2, 0.938));
     border-radius: 20px;
     color: white;
   }
